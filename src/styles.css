@@ -93,7 +93,7 @@ footer p {
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 576px) {
   .container-all {
     max-width: 80%;
     background: radial-gradient(
@@ -103,15 +103,16 @@ footer p {
     );
   }
   div.city-search {
-    max-height: 3rem;
+    max-height: fit-content;
+    max-width: fit-content;
   }
 
   div.current-btn {
-    max-height: 4rem;
-    padding: 0.12rem 0.27rem;
+    font-size: calc(1rem + 0.390625vw);
     margin: 0 auto;
-    display: flex;
-    justify-content: start;
+    max-height: fit-content;
+    max-width: fit-content;
+    padding: 0.12rem 0.27rem;
   }
 
   div.sun-info {
@@ -147,7 +148,7 @@ footer p {
   .container-all {
     max-width: 85%;
     background: radial-gradient(
-      451px at 50% 20%,
+      451px at 31% 32%,
       rgba(255, 255, 255, 0.31) 1.2%,
       rgb(131, 13, 240) 100.2%
     );
@@ -156,6 +157,7 @@ footer p {
     padding: 1.5rem 3.75rem 0.8rem 3.75rem;
   }
   button.current-btn {
+    font-size: calc(1.5rem + 0.390625vw);
     padding: 0.12rem 0.27rem;
     margin: 0 auto;
   }
@@ -229,7 +231,7 @@ footer p {
   border: 3px solid rgb(254, 165, 0);
   border-radius: 1.25em;
   font-family: "Oleo Script Swash Caps", cursive;
-  font-size: 1.5rem;
+  font-size: calc(1.5rem + 0.390625vw);
   line-height: 1.75rem;
   padding: 0.12rem 0.93rem;
   transition: all 200ms ease-in-out;
