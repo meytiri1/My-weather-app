@@ -108,7 +108,7 @@ footer p {
   }
 
   div.current-btn {
-    font-size: calc(1rem + 0.390625vw);
+    font-size: 1.2rem;
     margin: 0 auto;
     max-height: fit-content;
     max-width: fit-content;
