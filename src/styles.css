@@ -1,0 +1,317 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: calc(4.38rem + 0.390625vw);
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: calc(2.13rem + 0.390625vw);
+  margin: 0;
+}
+
+h3 {
+  font-size: calc(1.25rem + 0.390625vw);
+}
+
+footer p {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.container-all {
+  background: radial-gradient(
+    451px at 20% 37%,
+    rgba(255, 255, 255, 0.31) 1.2%,
+    rgb(131, 13, 240) 100.2%
+  );
+  border: none;
+  border-radius: 0.94em;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+  display: block;
+  font-family: "Raleway", sans-serif;
+  margin: 2.5rem auto 1.25rem auto;
+  max-width: max(400px, 60%);
+  padding: 1.25rem 2.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .container-all {
+    max-width: 80%;
+    background: radial-gradient(
+      451px at 50% 20%,
+      rgba(255, 255, 255, 0.31) 1.2%,
+      rgb(131, 13, 240) 100.2%
+    );
+  }
+
+  div.search-btn {
+    padding: 1.5rem 3.75rem 0.8rem 3.75rem;
+  }
+  button.current-btn {
+    padding: 0.12rem 0.27rem;
+  }
+
+  div.sun-info {
+    padding-bottom: 0.5rem;
+  }
+  div.sun-symbole {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+  i.icon-sun {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  div.city-weather {
+    text-align: center;
+  }
+
+  div.weather-info {
+    max-width: max-content;
+  }
+  div.weather-info2 {
+    max-width: max-content;
+  }
+
+  div.quote {
+    padding-top: 0.63rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container-all {
+    max-width: 80%;
+    background: radial-gradient(
+      451px at 50% 20%,
+      rgba(255, 255, 255, 0.31) 1.2%,
+      rgb(131, 13, 240) 100.2%
+    );
+  }
+  div.city-search {
+    max-height: 3rem;
+  }
+
+  div.current-btn {
+    max-height: 4rem;
+    padding: 0.12rem 0.27rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+  }
+
+  div.sun-info {
+    padding-bottom: 0.5rem;
+  }
+  div.sun-symbole {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+  i.icon-sun {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  div.city-weather {
+    text-align: center;
+  }
+
+  div.weather-info {
+    max-width: max-content;
+  }
+  div.weather-info2 {
+    max-width: max-content;
+  }
+
+  div.quote {
+    padding-top: 0.63rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-all {
+    max-width: 85%;
+    background: radial-gradient(
+      451px at 50% 20%,
+      rgba(255, 255, 255, 0.31) 1.2%,
+      rgb(131, 13, 240) 100.2%
+    );
+  }
+  div.search-btn {
+    padding: 1.5rem 3.75rem 0.8rem 3.75rem;
+  }
+  button.current-btn {
+    padding: 0.12rem 0.27rem;
+    margin: 0 auto;
+  }
+
+  div.sun-info {
+    padding-bottom: 0.5rem;
+  }
+  div.sun-symbole {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+  i.icon-sun {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  div.city-weather {
+    text-align: center;
+  }
+
+  div.weather-info {
+    max-width: max-content;
+    margin: 0 auto;
+  }
+  div.weather-info2 {
+    max-width: max-content;
+    margin: 0 auto;
+  }
+
+  div.quote {
+    padding-top: 0.63rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container-all {
+    max-width: 75%;
+  }
+
+  div.quote {
+    padding-top: 1.25rem;
+  }
+}
+
+.city-search-form {
+  display: block;
+  margin: 1.88rem 0;
+}
+
+.form-control {
+  border-radius: 1.25em;
+}
+
+#search-addon {
+  background: rgb(254, 165, 0);
+  border: 3px solid rgb(254, 165, 0);
+  border-radius: 1.25em;
+  transition: all 200ms ease-in-out;
+}
+
+#search-addon:hover {
+  background: #fff;
+  border: 3px solid rgb(254, 165, 0);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.current-btn {
+  background: rgb(254, 165, 0);
+  border: 3px solid rgb(254, 165, 0);
+  border-radius: 1.25em;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding: 0.12rem 0.93rem;
+  transition: all 200ms ease-in-out;
+}
+
+.current-btn:hover {
+  background: #fff;
+  border: 3px solid rgb(254, 165, 0);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.sun-info {
+  margin: 0;
+  padding: 0.63rem 0 1.88rem 0;
+}
+
+.icon-sun {
+  color: rgb(254, 165, 0);
+  font-size: 10rem;
+  padding: 2.5rem 0;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.27);
+  transition: 1.5s;
+}
+
+.icon-sun:hover {
+  color: rgb(255, 204, 0);
+  transform: rotate(380deg);
+}
+
+.degree {
+  font-size: 1.63rem;
+  position: relative;
+  text-decoration: none;
+  top: -1.8rem;
+  vertical-align: baseline;
+}
+
+.country {
+  font-size: calc(1.25rem + 0.390625vw);
+}
+
+.date {
+  font-size: calc(1em + 0.390625vw);
+  margin-top: 0.5rem;
+}
+
+.min-max-temp {
+  background: #fff;
+  border: none;
+  border-radius: 3.75em;
+  display: block;
+  font-size: calc(0.69rem + 0.390625vw);
+  list-style-type: none;
+  margin: 0 auto;
+  min-width: min-content;
+  opacity: 0.8;
+  padding: 0.94rem 0.63rem;
+}
+
+.weather-forecast {
+  background: #fff;
+  border: none;
+  border-radius: 3.75rem;
+  display: block;
+  font-size: calc(0.75rem + 0.390625vw);
+  list-style-type: none;
+  margin: 0 auto;
+  min-width: min-content;
+  opacity: 0.8;
+  padding: 1.88rem 0.63rem;
+}
+
+.wea-icon {
+  font-size: 2.38rem;
+  color: rgb(254, 165, 0);
+}
+
+.quote {
+  color: #fff;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: calc(1.25rem + 0.390625vw);
+  font-weight: 500;
+  padding: 0 0 0.63rem 0;
+}
