@@ -84,7 +84,7 @@ function getCurrentWeather(response) {
     Math.round(response.data.main.temp));
 
   let currentCity = (document.querySelector("#city").innerHTML =
-    response.data.name);
+    response.data.name + `, `);
 
   console.log(response.data);
   let currentCountry = (document.querySelector("#country").innerHTML =
