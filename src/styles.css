@@ -97,7 +97,7 @@ footer p {
 
 @media screen and (max-width: 576px) {
   .container-all {
-    max-width: 80%;
+    max-width: 85%;
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.31) -20%,
@@ -148,7 +148,7 @@ footer p {
 
 @media screen and (max-width: 768px) {
   .container-all {
-    max-width: 85%;
+    max-width: 90%;
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.31) -20%,
@@ -178,7 +178,7 @@ footer p {
   }
 
   div.city-weather {
-    text-align: center;
+    text-align: left;
   }
 
   div.weather-info {
@@ -197,7 +197,7 @@ footer p {
 
 @media screen and (max-width: 1024px) {
   .container-all {
-    max-width: 75%;
+    max-width: 65%;
   }
 
   div.quote {
@@ -273,18 +273,20 @@ footer p {
 }
 
 .country {
-  font-size: calc(1.25rem + 0.390625vw);
+  display: inline-block;
+  font-size: calc(0.9rem + 0.390625vw);
 }
 
 .date {
-  font-size: calc(1em + 0.390625vw);
-  margin-top: 0.5rem;
+  font-size: calc(0.9rem + 0.390625vw);
+  margin-top: 0;
 }
 
 .min-max-temp {
   background: #fff;
   border: none;
   border-radius: 3.75em;
+  color: #000;
   display: block;
   font-size: calc(0.69rem + 0.390625vw);
   list-style-type: none;
@@ -298,6 +300,7 @@ footer p {
   background: #fff;
   border: none;
   border-radius: 3.75rem;
+  color: #000;
   display: block;
   font-size: calc(0.75rem + 0.390625vw);
   list-style-type: none;

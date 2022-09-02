@@ -36,7 +36,7 @@ function getDate(now) {
   let month = months[now.getMonth()];
   let year = now.getFullYear();
   let currentDate = document.querySelector("#date");
-  currentDate.innerHTML = `${weekday}, ${hour}:${minutes}, ${month} ${day}, ${year}`;
+  currentDate.innerHTML = `${weekday}, ${hour}:${minutes},</br>${month} ${day}, ${year}`;
 
   return currentDate;
 }
@@ -83,12 +83,12 @@ function getCurrentWeather(response) {
   let currentTemperature = (document.querySelector("#temperature").innerHTML =
     Math.round(response.data.main.temp));
 
-  let currentCity = (document.querySelector("#city").innerHTML =
-    response.data.name + `, `);
-
   console.log(response.data);
   let currentCountry = (document.querySelector("#country").innerHTML =
     response.data.sys.country);
+
+  let currentCity = (document.querySelector("#city").innerHTML =
+    response.data.name + `, ` + currentCountry);
 
   let currentWeather = (document.querySelector("#current-weather").innerHTML =
     response.data.weather[0].main);
