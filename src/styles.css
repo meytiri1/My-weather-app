@@ -14,12 +14,18 @@ a:focus {
 
 h1 {
   font-size: calc(4.38rem + 0.390625vw);
-  margin-bottom: 0;
+  margin: 0;
 }
 
 h2 {
-  font-size: calc(2.13rem + 0.390625vw);
+  display: inline-block;
+  font-size: calc(2rem + 0.390625vw);
+  font-weight: bold;
   margin: 0;
+}
+
+span.country {
+  font-size: calc(1.2rem + 0.390625vw);
 }
 
 h3 {
@@ -95,60 +101,9 @@ footer p {
   }
 }
 
-@media screen and (max-width: 576px) {
-  .container-all {
-    max-width: 85%;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.31) -20%,
-      rgb(218, 163, 245) 170%
-    );
-  }
-  div.city-search {
-    max-height: fit-content;
-    max-width: fit-content;
-  }
-
-  div.current-btn {
-    font-size: 1.5rem;
-    margin: 0 auto;
-    max-height: fit-content;
-    max-width: fit-content;
-    padding: 0.12rem 0.27rem;
-  }
-
-  div.sun-info {
-    padding-bottom: 0.5rem;
-  }
-  div.sun-symbole {
-    text-align: center;
-    padding: 0;
-    margin: 0 auto;
-  }
-  i.icon-sun {
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  div.city-weather {
-    text-align: center;
-  }
-
-  div.weather-info {
-    max-width: max-content;
-  }
-  div.weather-info2 {
-    max-width: max-content;
-  }
-
-  div.quote {
-    padding-top: 0.63rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .container-all {
-    max-width: 90%;
+    max-width: 85%;
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.31) -20%,
@@ -178,7 +133,7 @@ footer p {
   }
 
   div.city-weather {
-    text-align: left;
+    text-align: center;
   }
 
   div.weather-info {
@@ -195,14 +150,57 @@ footer p {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   .container-all {
-    max-width: 65%;
+    max-width: 85%;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.31) -20%,
+      rgb(218, 163, 245) 170%
+    );
+  }
+  div.search-btn {
+    padding: 1.5rem 3.75rem 0.8rem 3.75rem;
+  }
+  button.current-btn {
+    font-size: 1.5rem;
+    padding: 0.12rem 0.27rem;
+    margin: 0 auto;
+  }
+
+  div.sun-info {
+    padding-bottom: 0.5rem;
+  }
+  div.sun-symbole {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+  i.icon-sun {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  div.city-weather {
+    text-align: center;
+  }
+
+  div.weather-info {
+    max-width: max-content;
+    margin: 0 auto;
+  }
+  div.weather-info2 {
+    max-width: max-content;
+    margin: 0 auto;
   }
 
   div.quote {
-    padding-top: 1.25rem;
+    padding-top: 0.63rem;
   }
+}
+
+div.container {
+  padding: 0;
 }
 
 .city-search-form {
@@ -228,6 +226,10 @@ footer p {
   opacity: 0.8;
 }
 
+form.city-search-form {
+  margin-top: 0 auto;
+}
+
 .current-btn {
   background: rgb(8, 250, 171);
   border: 3px solid rgb(8, 250, 171);
@@ -246,15 +248,19 @@ footer p {
   opacity: 0.8;
 }
 
+div.weather-all {
+  margin: 0;
+}
+
 .sun-info {
   margin: 0;
-  padding: 0.63rem 0 1.88rem 0;
+  padding: 0;
 }
 
 .icon-sun {
   color: rgb(246, 180, 43);
   font-size: 10rem;
-  padding: 2.5rem 0;
+  padding: 0;
   text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.27);
   transition: 1.5s;
 }
@@ -279,7 +285,7 @@ footer p {
 
 .date {
   font-size: calc(0.9rem + 0.390625vw);
-  margin-top: 0;
+  margin: 0;
 }
 
 .min-max-temp {
@@ -292,7 +298,9 @@ footer p {
   list-style-type: none;
   margin: 0 auto;
   min-width: min-content;
+  max-width: max-content;
   opacity: 0.8;
+  text-align: center;
   padding: 0.94rem 0.63rem;
 }
 
@@ -306,8 +314,10 @@ footer p {
   list-style-type: none;
   margin: 0 auto;
   min-width: min-content;
+  max-width: max-content;
   opacity: 0.8;
   padding: 1.88rem 0.63rem;
+  text-align: center;
 }
 
 .wea-icon {
