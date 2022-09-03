@@ -28,7 +28,7 @@
     <div class="container-all">
       <form class="city-search-form" id="search-form">
         <div class="row">
-          <div class="col-md-6 d-flex justify-content-md-start">
+          <div class="d-inline-flex p-6 flex-wrap flex-grow-1">
             <div class="input-group rounded city-search">
               <input
                 type="search"
@@ -46,7 +46,7 @@
               </span>
             </div>
           </div>
-          <div class="col-md-6 d-flex justify-content-md-start search-btn">
+          <div class="d-inline-flex p-6 flex-wrap search-btn">
             <button class="btn current-btn" id="current-button" type="button">
               Current location
             </button>
@@ -54,7 +54,7 @@
         </div>
       </form>
       <div class="container">
-        <div class="row h-100">
+        <div class="row h-100 weather-all">
           <div class="col-sm-6 text-start sun-info">
             <div class="sun-symbole">
               <span class="weather-symbole"
@@ -73,7 +73,9 @@
                   ></span
                 >
               </h1>
-              <h2 id="city">, <span class="country" id="country"></span></h2>
+              <h2 class="city" id="city"></h2>
+              ,
+              <span class="country" id="country"></span>
               <h3 id="current-weather"></h3>
               <p class="date" id="date"></p>
             </div>
