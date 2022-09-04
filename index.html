@@ -28,7 +28,7 @@
     <div class="container-all">
       <form class="city-search-form" id="search-form">
         <div class="row">
-          <div class="d-inline-flex p-6 flex-wrap flex-grow-1">
+          <div class="d-inline-flex p-6 justify-content-between">
             <div class="input-group rounded city-search">
               <input
                 type="search"
@@ -46,7 +46,7 @@
               </span>
             </div>
           </div>
-          <div class="d-inline-flex p-6 flex-wrap search-btn">
+          <div class="d-inline-flex p-6 justify-content-between search-btn">
             <button class="btn current-btn" id="current-button" type="button">
               Current location
             </button>
@@ -63,21 +63,22 @@
               <br />
               <br />
             </div>
-            <div class="city-weather">
-              <h1>
-                <span id="temperature"></span
-                ><span class="degree"
-                  ><sup
-                    ><a href="#" id="celsius">°C</a> |
-                    <a href="#" id="fahrenheit">°F</a></sup
-                  ></span
-                >
-              </h1>
-              <h2 class="city" id="city"></h2>
-              ,
-              <span class="country" id="country"></span>
-              <h3 id="current-weather"></h3>
-              <p class="date" id="date"></p>
+            <div class="container-city">
+              <div class="city-weather">
+                <h1>
+                  <span id="temperature"></span
+                  ><span class="degree"
+                    ><sup
+                      ><a href="#" id="celsius">°C</a> |
+                      <a href="#" id="fahrenheit">°F</a></sup
+                    ></span
+                  >
+                </h1>
+                <h2 class="city" id="city"></h2>
+                , <span class="country" id="country"></span>
+                <h3 id="current-weather"></h3>
+                <p class="date" id="date"></p>
+              </div>
             </div>
           </div>
           <div class="col-sm-3 my-auto text-center weather-info">

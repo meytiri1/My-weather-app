@@ -13,23 +13,23 @@ a:focus {
 }
 
 h1 {
-  font-size: calc(4.38rem + 0.390625vw);
+  font-size: calc(4.35rem + 0.390625vw);
   margin: 0;
 }
 
 h2 {
   display: inline-block;
-  font-size: calc(2rem + 0.390625vw);
+  font-size: calc(1.9rem + 0.390625vw);
   font-weight: bold;
   margin: 0;
 }
 
 span.country {
-  font-size: calc(1.2rem + 0.390625vw);
+  font-size: calc(1.15rem + 0.390625vw);
 }
 
 h3 {
-  font-size: calc(1.2rem + 0.390625vw);
+  font-size: calc(1.15rem + 0.390625vw);
   margin: 0;
 }
 
@@ -50,7 +50,6 @@ footer p {
   display: block;
   font-family: "Raleway", sans-serif;
   margin: 2.5rem auto 1.25rem auto;
-  max-width: max(400px, 60%);
   padding: 1.25rem 2.5rem;
 }
 
@@ -72,21 +71,10 @@ footer p {
     padding: 0.12rem 0.27rem;
   }
 
-  div.sun-info {
-    padding-bottom: 0.5rem;
-  }
   div.sun-symbole {
     text-align: center;
     padding: 0;
     margin: 0 auto;
-  }
-  i.icon-sun {
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  div.city-weather {
-    text-align: center;
   }
 
   div.weather-info {
@@ -103,7 +91,7 @@ footer p {
 
 @media screen and (max-width: 768px) {
   .container-all {
-    max-width: 85%;
+    max-height: 60%;
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.31) -20%,
@@ -119,21 +107,10 @@ footer p {
     margin: 0 auto;
   }
 
-  div.sun-info {
-    padding-bottom: 0.5rem;
-  }
   div.sun-symbole {
     text-align: center;
     padding: 0;
     margin: 0 auto;
-  }
-  i.icon-sun {
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  div.city-weather {
-    text-align: center;
   }
 
   div.weather-info {
@@ -152,7 +129,7 @@ footer p {
 
 @media screen and (max-width: 1400px) {
   .container-all {
-    max-width: 85%;
+    max-height: 60%;
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.31) -20%,
@@ -168,21 +145,51 @@ footer p {
     margin: 0 auto;
   }
 
-  div.sun-info {
-    padding-bottom: 0.5rem;
-  }
   div.sun-symbole {
     text-align: center;
     padding: 0;
     margin: 0 auto;
   }
-  i.icon-sun {
-    padding: 0;
+
+  div.weather-info {
+    max-width: fit-content;
+    max-height: min-content;
+    margin: 0 auto;
+  }
+  div.weather-info2 {
+    max-width: fit-content;
+    max-height: 60%;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+  }
+
+  div.quote {
+    padding-top: 0.63rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container-all {
+    max-height: 60%;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.31) -20%,
+      rgb(218, 163, 245) 170%
+    );
+  }
+  div.search-btn {
+    padding: 1.5rem 3.75rem 0.8rem 3.75rem;
+  }
+  button.current-btn {
+    font-size: 1.5rem;
+    padding: 0.12rem 0.27rem;
     margin: 0 auto;
   }
 
-  div.city-weather {
+  div.sun-symbole {
     text-align: center;
+    padding: 0;
+    margin: 0 auto;
   }
 
   div.weather-info {
@@ -192,6 +199,7 @@ footer p {
   div.weather-info2 {
     max-width: max-content;
     margin: 0 auto;
+    padding-bottom: 1.5rem;
   }
 
   div.quote {
@@ -254,13 +262,15 @@ div.weather-all {
 
 .sun-info {
   margin: 0;
-  padding: 0;
+  padding-bottom: 1.5rem;
 }
 
 .icon-sun {
   color: rgb(246, 180, 43);
-  font-size: 10rem;
+  font-size: 9rem;
   padding: 0;
+  margin: 0 auto;
+  text-align: center;
   text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.27);
   transition: 1.5s;
 }
@@ -270,8 +280,16 @@ div.weather-all {
   transform: rotate(380deg);
 }
 
+div.container-city {
+  text-align: center;
+}
+div.city-weather {
+  display: inline-block;
+  text-align: left;
+}
+
 .degree {
-  font-size: 1.63rem;
+  font-size: 1.61rem;
   position: relative;
   text-decoration: none;
   top: -1.8rem;
@@ -304,24 +322,25 @@ div.weather-all {
   padding: 0.94rem 0.63rem;
 }
 
+div.weather-info2 {
+  padding-bottom: 1.5rem;
+}
 .weather-forecast {
   background: #fff;
   border: none;
   border-radius: 3.75rem;
   color: #000;
   display: block;
-  font-size: calc(0.75rem + 0.390625vw);
+  font-size: calc(0.69rem + 0.390625vw);
   list-style-type: none;
   margin: 0 auto;
-  min-width: min-content;
-  max-width: max-content;
   opacity: 0.8;
   padding: 1.88rem 0.63rem;
   text-align: center;
 }
 
 .wea-icon {
-  font-size: 2.38rem;
+  font-size: 2rem;
   color: rgb(246, 180, 43);
 }
 

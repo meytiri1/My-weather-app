@@ -102,6 +102,7 @@ function getCurrentWeather(response) {
   let currentPrecipitation = (document.querySelector(
     "#precipitation"
   ).innerHTML = Math.round(response.data.rain) + `mm`);
+  console.log(currentPrecipitation);
   let precip = response.data.rain;
   let precipitation = document.querySelector("#precipitation");
   if (precip == null) {
