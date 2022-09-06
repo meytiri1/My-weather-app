@@ -101,19 +101,26 @@ function getCurrentWeather(response) {
 
   let currentPrecipitation = (document.querySelector(
     "#precipitation"
-  ).innerHTML = Math.round(response.data.rain) + `mm`);
+  ).innerHTML = Math.round(response.data.rain));
   console.log(currentPrecipitation);
   let precip = response.data.rain;
   let precipitation = document.querySelector("#precipitation");
   if (precip == null) {
-    precipitation.innerHTML = `0 mm`;
+    precipitation.innerHTML = `0`;
   }
 
   let currentWindSpeed = (document.querySelector("#wind-speed").innerHTML =
-    Math.round(response.data.wind.speed) + ` km/h`);
+    Math.round(response.data.wind.speed));
 
   let currentHumidity = (document.querySelector("#humidity").innerHTML =
-    Math.round(response.data.main.humidity) + ` %`);
+    Math.round(response.data.main.humidity));
+
+  let weatherIcon = document.querySelector("#icon-sun");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png)`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showCurrentLocation() {
@@ -143,68 +150,6 @@ function changeToFahrenheit(event) {
 }
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", changeToFahrenheit);
-
-//Change Weather icons
-let weatherIcon = [
-  {
-    weather: `Clear`,
-    icon: `<i class="fa-solid fa-sun icon-sun"></i>`,
-  },
-  {
-    weather: `Clouds`,
-    icon: `<i class="fa-solid fa-cloud"></i>`,
-  },
-  {
-    weather: `Rain`,
-    icon: `<i class="fa-solid fa-cloud-showers-heavy"></i>`,
-  },
-  {
-    weather: `Snow`,
-    icon: `<i class="fa-solid fa-snowflake"></i>`,
-  },
-  {
-    weather: `Drizzle`,
-    icon: `<i class="fa-solid fa-cloud-rain"></i>`,
-  },
-  {
-    weather: `Thunderstorm`,
-    icon: `<i class="fa-solid fa-cloud-bolt"></i>`,
-  },
-];
-
-//const newIcon = (document.getElementById(`weather-symbole`).innerHTML =
-//  "<span class=`weather-symbole`><i class=`fa fa-solid fa-cloud`></i></span>");
-//console.log(newIcon);
-
-//let weather = document.querySelector("#current-weather");
-//console.log(currentIcon);
-
-//let weatherDOM = weather.innerHTML;
-//if (weatherDOM === `${weatherIcon[0].weather}`) {
-//  currentIcon.innerHTML = `<i class="fa fa-solid fa-sun icon-sun"></i>`;
-//} else {
-//if (weatherDOM === `${weatherIcon[1].weather}`) {
-//  currentIcon.innerHTML = "<i class=`fa fa-solid fa-cloud`></i>";
-//} else {
-//  if (weatherDOM === `${weatherIcon[2].weather}`) {
-//    currentIcon.innerHTML = `${weatherIcon[2].icon}`;
-//  } else {
-//    if (weatherDOM === `${weatherIcon[3].weather}`) {
-//      currentIcon.innerHTML = `${weatherIcon[3].icon}`;
-//    } else {
-//      if (weatherDOM === `${weatherIcon[4].weather}`) {
-//        currentIcon.innerHTML = `${weatherIcon[4].icon}`;
-//      } else {
-//        if (weatherDOM === `${weatherIcon[5].weather}`) {
-//         currentIcon.innerHTML = `${weatherIcon[5].icon}`;
-//        }
-//      }
-//    }
-//  }
-//}
-//}
-
-//currentIcon.innerHTML = `${weatherIcon}`;
 
 //Daily quotes
 function changeQuote(weather) {
