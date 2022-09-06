@@ -24,6 +24,12 @@ h2 {
   margin: 0;
 }
 
+div.sun-symbole {
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
 span.country {
   font-size: calc(1.15rem + 0.390625vw);
 }
@@ -71,12 +77,6 @@ footer p {
     padding: 0.12rem 0.27rem;
   }
 
-  div.sun-symbole {
-    text-align: center;
-    padding: 0;
-    margin: 0 auto;
-  }
-
   div.weather-info {
     max-width: max-content;
   }
@@ -91,7 +91,7 @@ footer p {
 
 @media screen and (max-width: 768px) {
   .container-all {
-    max-height: 60%;
+    max-width: 60%;
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.31) -20%,
@@ -104,12 +104,6 @@ footer p {
   button.current-btn {
     font-size: 1.5rem;
     padding: 0.12rem 0.27rem;
-    margin: 0 auto;
-  }
-
-  div.sun-symbole {
-    text-align: center;
-    padding: 0;
     margin: 0 auto;
   }
 
@@ -129,7 +123,7 @@ footer p {
 
 @media screen and (max-width: 1400px) {
   .container-all {
-    max-height: 60%;
+    max-width: 85%;
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.31) -20%,
@@ -142,12 +136,6 @@ footer p {
   button.current-btn {
     font-size: 1.5rem;
     padding: 0.12rem 0.27rem;
-    margin: 0 auto;
-  }
-
-  div.sun-symbole {
-    text-align: center;
-    padding: 0;
     margin: 0 auto;
   }
 
@@ -183,12 +171,6 @@ footer p {
   button.current-btn {
     font-size: 1.5rem;
     padding: 0.12rem 0.27rem;
-    margin: 0 auto;
-  }
-
-  div.sun-symbole {
-    text-align: center;
-    padding: 0;
     margin: 0 auto;
   }
 
@@ -257,27 +239,12 @@ form.city-search-form {
 }
 
 div.weather-all {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .sun-info {
-  margin: 0;
-  padding-bottom: 1.5rem;
-}
-
-.icon-sun {
-  color: rgb(246, 180, 43);
-  font-size: 9rem;
-  padding: 0;
   margin: 0 auto;
-  text-align: center;
-  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.27);
-  transition: 1.5s;
-}
-
-.icon-sun:hover {
-  color: rgb(246, 180, 43);
-  transform: rotate(380deg);
+  padding-bottom: 1.5rem;
 }
 
 div.container-city {
@@ -360,3 +327,18 @@ div.weather-info2 {
   transform: scale(1.1);
   color: rgb(8, 250, 171);
 }
+
+/*.icon-sun {
+  color: rgb(246, 180, 43);
+  font-size: 9rem;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.27);
+  transition: 1.5s;
+}
+
+.icon-sun:hover {
+  color: rgb(246, 180, 43);
+  transform: rotate(380deg);
+}*/
