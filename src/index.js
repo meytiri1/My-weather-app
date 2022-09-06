@@ -118,7 +118,7 @@ function getCurrentWeather(response) {
   let weatherIcon = document.querySelector("#icon-sun");
   weatherIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png)`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
