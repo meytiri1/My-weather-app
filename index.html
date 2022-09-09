@@ -37,6 +37,7 @@
                 placeholder="Search city"
                 aria-label="Search"
                 aria-describedby="search-addon"
+                autocomplete="off"
               />
               <span
                 class="input-group-text border-start-0 rounded-start"
@@ -46,8 +47,8 @@
               </span>
             </div>
           </div>
-          <div class="p-2 flex-grow-0 align-content-center search-btn">
-            <button class="btn current-btn" id="current-button" type="button">
+          <div class="p-1 flex-grow-0 align-content-center search-btn">
+            <button class="btn text-nowrap current-btn" id="current-button" type="button">
               Current location
             </button>
           </div>
@@ -73,7 +74,8 @@
                 <h2 class="city" id="city"></h2>
                 , <span class="country" id="country"></span>
                 <h3 id="current-weather"></h3>
-                <p class="date" id="date"></p>
+                <p class="date">Last updated:
+                  <span class="date" id="date"></span></p>
               </div>
             </div>
           </div>
