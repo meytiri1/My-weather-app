@@ -1,11 +1,6 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .container-all {
     max-width: 85%;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.31) 1%,
-      rgb(212, 201, 249) 80%
-    );
   }
 
   button.current-btn {
@@ -26,11 +21,6 @@
 @media screen and (max-width: 768px) {
   .container-all {
     max-width: 85%;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.31) 1%,
-      rgb(212, 201, 249) 80%
-    );
   }
 
   button.current-btn {
@@ -52,11 +42,6 @@
 @media screen and (max-width: 1400px) {
   .container-all {
     max-width: 90%;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.31) 1%,
-      rgb(212, 201, 249) 80%
-    );
   }
 
   div.weather-info {
@@ -75,11 +60,6 @@
 @media screen and (min-width: 1400px) {
   .container-all {
     max-width: 60%;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.31) 1%,
-      rgb(212, 201, 249) 80%
-    );
   }
 
   button.current-btn {
@@ -153,8 +133,8 @@ footer p {
 .container-all {
   background: linear-gradient(
     to top,
-    rgba(255, 255, 255, 0.31) -20%,
-    rgb(221, 213, 251) 170%
+    rgba(255, 255, 255, 0.31) -50%,
+    rgb(180, 163, 245) 100%
   );
   border: none;
   border-radius: 0.94em;
@@ -210,10 +190,6 @@ form.city-search-form {
   background: rgba(76, 236, 110, 0.65);
   border: 2px solid rgb(76, 236, 110);
   cursor: pointer;
-}
-
-div.weather-all {
-  margin: 0 auto;
 }
 
 div.container-city {
