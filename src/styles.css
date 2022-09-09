@@ -3,8 +3,8 @@
     max-width: 85%;
     background: linear-gradient(
       to top,
-      rgba(255, 255, 255, 0.31) -20%,
-      rgb(218, 163, 245) 170%
+      rgba(255, 255, 255, 0.31) 1%,
+      rgb(212, 201, 249) 80%
     );
   }
 
@@ -15,13 +15,11 @@
 
   div.weather-info {
     max-width: max-content;
+    margin: 0 auto;
   }
   div.weather-info2 {
     max-width: max-content;
-  }
-
-  div.quote {
-    padding-top: 0.63rem;
+    margin: 0 auto;
   }
 }
 
@@ -30,8 +28,8 @@
     max-width: 85%;
     background: linear-gradient(
       to top,
-      rgba(255, 255, 255, 0.31) -20%,
-      rgb(218, 163, 245) 170%
+      rgba(255, 255, 255, 0.31) 1%,
+      rgb(212, 201, 249) 80%
     );
   }
 
@@ -49,26 +47,16 @@
     max-width: max-content;
     margin: 0 auto;
   }
-
-  div.quote {
-    padding-top: 0.63rem;
-  }
 }
 
 @media screen and (max-width: 1400px) {
   .container-all {
-    max-width: 85%;
+    max-width: 90%;
     background: linear-gradient(
       to top,
-      rgba(255, 255, 255, 0.31) -20%,
-      rgb(218, 163, 245) 170%
+      rgba(255, 255, 255, 0.31) 1%,
+      rgb(212, 201, 249) 80%
     );
-  }
-
-  button.current-btn {
-    font-size: 1.5rem;
-    padding: 0.12rem 0.27rem;
-    margin: 0 auto;
   }
 
   div.weather-info {
@@ -82,19 +70,15 @@
     margin: 0 auto;
     padding-bottom: 1.5rem;
   }
-
-  div.quote {
-    padding-top: 0.63rem;
-  }
 }
 
 @media screen and (min-width: 1400px) {
   .container-all {
-    max-height: 60%;
+    max-width: 60%;
     background: linear-gradient(
       to top,
-      rgba(255, 255, 255, 0.31) -20%,
-      rgb(218, 163, 245) 170%
+      rgba(255, 255, 255, 0.31) 1%,
+      rgb(212, 201, 249) 80%
     );
   }
 
@@ -112,10 +96,6 @@
     max-width: max-content;
     margin: 0 auto;
     padding-bottom: 1.5rem;
-  }
-
-  div.quote {
-    padding-top: 0.63rem;
   }
 }
 
@@ -174,7 +154,7 @@ footer p {
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.31) -20%,
-    rgb(218, 163, 245) 170%
+    rgb(221, 213, 251) 170%
   );
   border: none;
   border-radius: 0.94em;
@@ -199,15 +179,15 @@ div.container {
 }
 
 #search-addon {
-  background: rgb(8, 250, 171);
-  border: 2px solid rgb(8, 250, 171);
+  background: rgb(76, 236, 110);
+  border: 2px solid rgb(76, 236, 110);
   border-radius: 1.25em;
   transition: all 200ms ease-in-out;
 }
 
 #search-addon:hover {
-  background: rgba(8, 250, 171, 0.65);
-  border: 2px solid rgb(26, 232, 165);
+  background: rgba(76, 236, 110, 0.65);
+  border: 2px solid rgb(76, 236, 110);
   cursor: pointer;
   opacity: 0.8;
 }
@@ -217,8 +197,8 @@ form.city-search-form {
 }
 
 .current-btn {
-  background: rgba(8, 250, 171);
-  border: 2px solid rgba(8, 250, 171);
+  background: rgb(76, 236, 110);
+  border: 2px solid rgb(76, 236, 110);
   border-radius: 1.25em;
   font-family: "Oleo Script Swash Caps", cursive;
   font-size: 1.5rem;
@@ -227,8 +207,8 @@ form.city-search-form {
 }
 
 .current-btn:hover {
-  background: rgba(8, 250, 171, 0.65);
-  border: 2px solid rgba(8, 250, 171);
+  background: rgba(76, 236, 110, 0.65);
+  border: 2px solid rgb(76, 236, 110);
   cursor: pointer;
 }
 
@@ -306,7 +286,7 @@ div.weather-info2 {
   font-size: calc(1.25rem + 0.390625vw);
   font-weight: 500;
   max-height: fit-content;
-  padding: 0 0 0.63rem 0;
+  padding-top: 0.63rem;
   text-align: center;
   text-shadow: 0px 0.2px 0.2px rgba(0, 0, 0, 0.5);
   transition: all 600ms ease-in-out;
@@ -314,7 +294,7 @@ div.weather-info2 {
 
 .quote:hover {
   transform: scale(1.1);
-  color: rgb(8, 250, 171);
+  color: rgb(76, 236, 110);
 }
 
 /*.icon-sun {
