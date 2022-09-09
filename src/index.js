@@ -127,11 +127,15 @@ function showCurrentLocation() {
 function changeToFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("#temperature");
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   temp.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
 function changeToCelsius(event) {
   event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
   let temp = document.querySelector("#temperature");
   temp.innerHTML = Math.round(celsiusTemperature);
 }
