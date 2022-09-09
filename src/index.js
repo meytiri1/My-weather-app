@@ -42,46 +42,14 @@ function getDate(now) {
 }
 getDate(new Date());
 
-//Search engine & Weather API
-function searchCity(city) {
-  let units = `metric`;
-  let apiKey = "56e3c80227c38c7f7a05b24686a60ec1";
-  let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?`;
-  let apiUrl = `${apiEndpoint}q=${city}&appid=${apiKey}&units=${units}`;
-
-  axios.get(apiUrl).then(getCurrentWeather);
-}
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#search-input").value;
-  searchCity(city);
-}
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-let searchButton = document.querySelector("#search-addon");
-searchButton.addEventListener("click", handleSubmit);
-searchButton.addEventListener("keyup", handleSubmit);
-
-//Default city
-searchCity("Berlin");
-
-//CURRENT Weather API & Geolocation API
-function retrieveWeatherLocation(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let units = `metric`;
-  let apiKey = "56e3c80227c38c7f7a05b24686a60ec1";
-  let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?`;
-  let apiUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-
-  axios.get(apiUrl).then(getCurrentWeather);
-}
-
+//
+//
+//
 function getCurrentWeather(response) {
   let currentTemperature = (document.querySelector("#temperature").innerHTML =
     Math.round(response.data.main.temp));
+
+  celsiusTemperature = response.data.main.temp;
 
   console.log(response.data);
   let currentCountry = (document.querySelector("#country").innerHTML =
@@ -123,34 +91,74 @@ function getCurrentWeather(response) {
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
+//Search engine & Weather API
+function searchCity(city) {
+  let units = `metric`;
+  let apiKey = "56e3c80227c38c7f7a05b24686a60ec1";
+  let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?`;
+  let apiUrl = `${apiEndpoint}q=${city}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(getCurrentWeather);
+}
+
+//CURRENT Weather API & Geolocation API
+function retrieveWeatherLocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let units = `metric`;
+  let apiKey = "56e3c80227c38c7f7a05b24686a60ec1";
+  let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?`;
+  let apiUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(getCurrentWeather);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search-input").value;
+  searchCity(city);
+}
+
 function showCurrentLocation() {
   navigator.geolocation.getCurrentPosition(retrieveWeatherLocation);
+}
+
+//Temperature conversion
+function changeToFahrenheit(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#temperature");
+  temp.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
+}
+
+function changeToCelsius(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#temperature");
+  temp.innerHTML = Math.round(celsiusTemperature);
 }
 
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", showCurrentLocation);
 
-//Temperature conversion
-function changeToCelsius(event) {
-  event.preventDefault();
-  let tempC = document.querySelector("#temperature");
-  let celsiusCalculation = tempC.innerHTML;
-  celsiusCalculation = Number(celsiusCalculation);
-  tempC.innerHTML = Math.round(((celsiusCalculation - 32) * 5) / 9);
-}
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", changeToCelsius);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
-function changeToFahrenheit(event) {
-  event.preventDefault();
-  let temp = document.querySelector("#temperature");
-  let fahrenheitCalculation = temp.innerHTML;
-  fahrenheitCalculation = Number(fahrenheitCalculation);
-  temp.innerHTML = Math.round((fahrenheitCalculation * 9) / 5 + 32);
-}
+let searchButton = document.querySelector("#search-addon");
+searchButton.addEventListener("click", handleSubmit);
+searchButton.addEventListener("keyup", handleSubmit);
+
+let celsiusTemperature = null;
+
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", changeToFahrenheit);
 
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeToCelsius);
+
+//
+//Default city
+searchCity("Berlin");
+
+//
 //Daily quotes
 function changeQuote(weather) {
   let quote = document.querySelector("#daily-quote").innerHTML;
