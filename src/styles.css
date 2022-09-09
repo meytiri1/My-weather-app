@@ -83,18 +83,19 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a.active:hover {
+  font-weight: bold;
+  text-decoration: none;
 }
 
-a:focus {
+a.active:focus {
   color: #000;
   font-weight: bold;
   text-decoration: none;
 }
 
 h1 {
-  font-size: calc(3.5rem + 0.390625vw);
+  font-size: calc(3.7rem + 0.390625vw);
   margin: 0;
 }
 
@@ -111,10 +112,10 @@ div.sun-info {
 }
 img.icon-sun {
   display: inline-block;
-  justify-content: center;
+  justify-self: left;
   margin: 0;
   padding: 0;
-  width: 10.5rem;
+  width: 9.5rem;
 }
 
 span.country {
@@ -205,7 +206,7 @@ div.city-weather {
   font-size: 1.61rem;
   position: relative;
   text-decoration: none;
-  top: -1.8rem;
+  top: -1.2rem;
   vertical-align: baseline;
 }
 
