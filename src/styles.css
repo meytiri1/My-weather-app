@@ -83,13 +83,14 @@ a {
   text-decoration: none;
 }
 
-a.active:hover {
+a.active {
+  color: #000;
+  cursor: default;
   font-weight: bold;
   text-decoration: none;
 }
 
-a.active:focus {
-  color: #000;
+a.active:hover {
   font-weight: bold;
   text-decoration: none;
 }
@@ -255,7 +256,7 @@ div.weather-info2 {
 
 .wea-icon {
   font-size: 2rem;
-  color: rgb(246, 180, 43);
+  color: rgb(236, 110, 76);
 }
 
 .quote {
