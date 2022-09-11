@@ -51,7 +51,6 @@ function getCurrentWeather(response) {
 
   celsiusTemperature = response.data.main.temp;
 
-  console.log(response.data);
   let currentCountry = (document.querySelector("#country").innerHTML =
     response.data.sys.country);
 
@@ -60,6 +59,8 @@ function getCurrentWeather(response) {
 
   let currentWeather = (document.querySelector("#current-weather").innerHTML =
     response.data.weather[0].main);
+
+  weatherDescription = response.data.weather[0].main;
 
   let minTemperature = (document.querySelector("#min-temp").innerHTML =
     Math.round(response.data.main.temp_min));
@@ -89,6 +90,8 @@ function getCurrentWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
+
+  changeQuote(weatherDescription);
 }
 
 //Search engine & Weather API
@@ -165,12 +168,16 @@ searchCity("Berlin");
 //
 //Daily quotes
 function changeQuote(weather) {
-  let quote = document.querySelector("#daily-quote").innerHTML;
-  if (weather === `Clear`) {
-    quote = `"To find happiness, you must be your own sunshine"`;
+  let quote = document.querySelector("#daily-quote");
+  if (weather === "Clear") {
+    quote.innerHTML = `"Keep your eyes lifted high upon the sun, and you'll see the best light in everyone."`;
   } else {
-    quote = `"Smell the rain, and feel the sky. Let your soul and spirit fly."`;
+    if (weather === `Clouds`) {
+      quote.innerHTML = `"The sky and the sun are always there. It's the clouds that come and go."`;
+    } else {
+      quote.innerHTML = `"Smell the rain, and feel the sky. Let your soul and spirit fly."`;
+    }
   }
 }
-let currentWeather = document.querySelector("#current-weather").innerHTML;
-changeQuote(currentWeather);
+
+let weatherDescription = null;
