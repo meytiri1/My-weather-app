@@ -248,6 +248,7 @@ div.weather-info2 {
   display: block;
   font-size: calc(0.69rem + 0.390625vw);
   margin: 0 auto;
+  max-height: fit-content;
   max-width: max-content;
   opacity: 0.8;
   padding: 1.88rem 0.63rem;
@@ -262,8 +263,8 @@ div.weather-info2 {
 }
 
 img.forecast-icon {
-  max-width: 70%;
-  justify-content: center;
+  max-width: 50%;
+  justify-items: center;
 }
 
 .quote {
