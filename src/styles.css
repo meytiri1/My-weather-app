@@ -247,16 +247,23 @@ div.weather-info2 {
   color: #000;
   display: block;
   font-size: calc(0.69rem + 0.390625vw);
-  list-style-type: none;
   margin: 0 auto;
+  max-width: max-content;
   opacity: 0.8;
   padding: 1.88rem 0.63rem;
   text-align: center;
 }
 
-.wea-icon {
-  font-size: 2rem;
-  color: rgb(236, 110, 76);
+.weather-fore {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img.forecast-icon {
+  max-width: 70%;
+  justify-content: center;
 }
 
 .quote {
