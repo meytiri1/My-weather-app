@@ -48,7 +48,11 @@
             </div>
           </div>
           <div class="p-2 flex-shrink-1 search-btn">
-            <button class="btn text-nowrap w-100 align-items-center current-btn" id="current-button" type="button">
+            <button
+              class="btn text-nowrap w-100 align-items-center current-btn"
+              id="current-button"
+              type="button"
+            >
               Current location
             </button>
           </div>
@@ -57,9 +61,9 @@
       <div class="container">
         <div class="d-flex row h-100 weather-all">
           <div class="col-5 text-center sun-info">
-                <img src="" alt="" class="icon-sun" id="icon-sun" />
-              <br />
-              <br />
+            <img src="" alt="" class="icon-sun" id="icon-sun" />
+            <br />
+            <br />
             <div class="container-city">
               <div class="city-weather">
                 <h1>
@@ -71,14 +75,16 @@
                     ></span
                   >
                 </h1>
-                <h2 class="city" id="city"></h2>, <span class="country" id="country"></span>
+                <h2 class="city" id="city"></h2>
+                , <span class="country" id="country"></span>
                 <h3 id="current-weather"></h3>
-                <p class="date">Last updated:
-                  <span class="date" id="date"></span></p>
+                <p class="date">
+                  Last updated: <span class="date" id="date"></span>
+                </p>
               </div>
             </div>
           </div>
-          <div class=" col-4 col-sm-6 my-auto text-center weather-info">
+          <div class="col-4 col-sm-6 my-auto text-center weather-info">
             <ul class="min-max-temp">
               <li>
                 <span class="min-temp" id="min-temp"></span>°C /
@@ -97,40 +103,9 @@
             </ul>
           </div>
           <div class="col-3 col-sm-6 my-auto text-center weather-info2">
-            <ul class="weather-forecast">
-              <li>
-                <i class="fa-solid fa-cloud-sun wea-icon"></i>
-                <br />
-                <span class="temp-forecast">Tue, 22°C</span>
-              </li>
-              <hr />
-              <li>
-                <i class="fa-solid fa-cloud-rain wea-icon"></i>
-                <br />
-                <span class="temp-forecast">Wed, 18°C</span>
-              </li>
-              <hr />
-              <li>
-                <i class="fa-solid fa-cloud wea-icon"></i>
-                <br />
-                <span class="temp-forecast">Thu, 23°C</span>
-              </li>
-              <hr />
-              <li>
-                <i class="fa-solid fa-cloud-sun-rain wea-icon"></i>
-                <br />
-                <span class="temp-forecast">Fri, 26°C</span>
-              </li>
-              <hr />
-              <li>
-                <i class="fa-solid fa-sun sun-pre wea-icon"></i>
-                <br />
-                <span class="temp-forecast">Sat, 27°C</span>
-              </li>
-            </ul>
+            <div class="weather-forecast" id="forecast"></div>
           </div>
         </div>
-      </div>
         <div class="quote">
           <p class="quote-of-day" id="daily-quote"></p>
         </div>
@@ -142,7 +117,9 @@
           >Open-source code</a
         >
         by Michelle Köhler, hosted via
-        <a href="https://app.netlify.com/sites/velvety-churros-c2666e/overview">Netlify</a>
+        <a href="https://app.netlify.com/sites/velvety-churros-c2666e/overview"
+          >Netlify</a
+        >
       </p>
     </footer>
     <script src="src/index.js"></script>

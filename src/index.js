@@ -45,6 +45,36 @@ getDate(new Date());
 //
 //
 //
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `           <div class="d-flex flex-column weather-fore">
+                  <div class="weather-forecast-date">${day}</div>
+                  <img
+                    src="http://www.openweathermap.org/img/wn/01d@2x.png"
+                    alt=""
+                    class="forecast-icon"
+                  />
+                  <div class="weather-forecast-temperature">
+                    <span class="weather-forecast-temperature-min">18° </span
+                    ><span class="weather-forecast-temperature-max">22°</span>
+                  </div>
+                </div>
+                <hr />
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function getCurrentWeather(response) {
   let currentTemperature = (document.querySelector("#temperature").innerHTML =
     Math.round(response.data.main.temp));
@@ -164,6 +194,8 @@ celsius.addEventListener("click", changeToCelsius);
 //
 //Default city
 searchCity("Berlin");
+
+displayForecast();
 
 //
 //Daily quotes
