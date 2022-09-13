@@ -162,15 +162,15 @@ div.container {
 }
 
 #search-addon {
-  background: rgb(76, 236, 110);
-  border: 2px solid rgb(76, 236, 110);
+  background: rgb(228, 245, 163);
+  border: 2px solid rgb(228, 245, 163);
   border-radius: 1.25em;
   transition: all 200ms ease-in-out;
 }
 
 #search-addon:hover {
-  background: rgba(76, 236, 110, 0.65);
-  border: 2px solid rgb(76, 236, 110);
+  background: rgba(228, 245, 163, 0.65);
+  border: 2px solid rgb(228, 245, 163);
   cursor: pointer;
   opacity: 0.8;
 }
@@ -180,8 +180,8 @@ form.city-search-form {
 }
 
 .current-btn {
-  background: rgb(76, 236, 110);
-  border: 2px solid rgb(76, 236, 110);
+  background: rgb(228, 245, 163);
+  border: 2px solid rgb(228, 245, 163);
   border-radius: 1.25em;
   font-family: "Oleo Script Swash Caps", cursive;
   font-size: 1.5rem;
@@ -191,7 +191,7 @@ form.city-search-form {
 
 .current-btn:hover {
   background: rgba(76, 236, 110, 0.65);
-  border: 2px solid rgb(76, 236, 110);
+  border: 2px solid rgb(228, 245, 163);
   cursor: pointer;
 }
 
@@ -230,7 +230,7 @@ div.city-weather {
   font-size: calc(0.69rem + 0.390625vw);
   list-style-type: none;
   margin: 0 auto;
-  min-width: min-content;
+  min-height: min-content;
   max-width: max-content;
   opacity: 0.8;
   text-align: center;
@@ -238,9 +238,6 @@ div.city-weather {
 }
 
 div.weather-info2 {
-  padding-bottom: 1.5rem;
-}
-.weather-forecast {
   background: #fff;
   border: none;
   border-radius: 3.75rem;
@@ -248,10 +245,10 @@ div.weather-info2 {
   display: block;
   font-size: calc(0.69rem + 0.390625vw);
   margin: 0 auto;
-  max-height: fit-content;
-  max-width: max-content;
+  max-height: min-content;
+  max-width: 8rem;
   opacity: 0.8;
-  padding: 1.88rem 0.63rem;
+  padding: 0.94rem 0.63rem 1.5rem 0.63rem;
   text-align: center;
 }
 
@@ -263,7 +260,7 @@ div.weather-info2 {
 }
 
 img.forecast-icon {
-  max-width: 50%;
+  max-width: 50px;
   justify-items: center;
 }
 
@@ -280,6 +277,5 @@ img.forecast-icon {
 }
 
 .quote:hover {
-  transform: scale(1.1);
-  color: rgb(76, 236, 110);
+  color: rgb(228, 245, 163);
 }
