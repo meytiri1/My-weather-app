@@ -45,6 +45,14 @@ getDate(new Date());
 //
 //
 //
+function formateDateDarkTheme(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let hour = date.getHours();
+
+  console.log(date);
+  console.log(hour);
+}
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -55,8 +63,6 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-  console.log(forecast);
-
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -149,6 +155,13 @@ function getCurrentWeather(response) {
 
   getForecast(response.data.coord);
   changeQuote(weatherDescription);
+  formateDateDarkTheme(response.data.dt);
+  console.log(
+    new Date(response.data.dt * 1000 - response.data.timezone * 1000)
+  ); // minus
+  console.log(
+    new Date(response.data.dt * 1000 + response.data.timezone * 1000)
+  ); // plus
 }
 
 //Search engine & Weather API
