@@ -1,5 +1,5 @@
 //Current date
-function getDate(now) {
+function getDate(localCityTime) {
   let weekdays = [
     "Sunday",
     "Monday",
@@ -23,44 +23,51 @@ function getDate(now) {
     "November",
     "December",
   ];
-  let weekday = weekdays[now.getDay()];
-  let hour = now.getHours();
+  let weekday = weekdays[localCityTime.getDay()];
+  let hour = localCityTime.getHours();
   if (hour <= 9) {
     hour = `0${hour}`;
   }
-  let minutes = now.getMinutes();
+  let minutes = localCityTime.getMinutes();
   if (minutes <= 9) {
     minutes = `0${minutes}`;
   }
-  let day = now.getDate();
-  let month = months[now.getMonth()];
-  let year = now.getFullYear();
-  let currentDate = document.querySelector("#date");
-  currentDate.innerHTML = `${weekday}, ${hour}:${minutes},</br>${month} ${day}, ${year}`;
+  let day = localCityTime.getDate();
+  let month = months[localCityTime.getMonth()];
+  let year = localCityTime.getFullYear();
+  let currentDate = (document.querySelector(
+    "#date"
+  ).innerHTML = `${weekday}, ${hour}:${minutes},</br>${month} ${day}, ${year}`);
 
   return currentDate;
 }
-getDate(new Date());
 
-//
-//
-//
-function formateDateDarkTheme(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let hour = date.getHours();
+//Actual local time for searched city
+function getInputCityTime(timestamp, timezone) {
+  let dateTime = new Date(timestamp * 1000);
+  let toUtc = dateTime.getTime() + dateTime.getTimezoneOffset() * 60000;
+  let currentLocalTime = toUtc + 1000 * timezone;
+  let selectedDate = new Date(currentLocalTime);
 
-  console.log(date);
-  console.log(hour);
+  let hour = selectedDate.getHours();
+
+  console.log(selectedDate);
+
+  getDate(selectedDate);
+  return selectedDate;
 }
 
+//Weather forecast date formats
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
+
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }
 
+//Weather forecast
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -99,6 +106,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+//Fetch Weather Forecast API
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "1fd8093fa5ff12d796d7de756cc9d6b9";
@@ -108,6 +116,7 @@ function getForecast(coordinates) {
   axios.get(apiUrlForecast).then(displayForecast);
 }
 
+//DOM manipulation for current weather
 function getCurrentWeather(response) {
   let currentTemperature = (document.querySelector("#temperature").innerHTML =
     Math.round(response.data.main.temp));
@@ -155,13 +164,7 @@ function getCurrentWeather(response) {
 
   getForecast(response.data.coord);
   changeQuote(weatherDescription);
-  formateDateDarkTheme(response.data.dt);
-  console.log(
-    new Date(response.data.dt * 1000 - response.data.timezone * 1000)
-  ); // minus
-  console.log(
-    new Date(response.data.dt * 1000 + response.data.timezone * 1000)
-  ); // plus
+  getInputCityTime(response.data.dt, response.data.timezone);
 }
 
 //Search engine & Weather API
@@ -186,17 +189,19 @@ function retrieveWeatherLocation(position) {
   axios.get(apiUrl).then(getCurrentWeather);
 }
 
+//Get input from search form
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input").value;
   searchCity(city);
 }
 
+//Get current geolocation
 function showCurrentLocation() {
   navigator.geolocation.getCurrentPosition(retrieveWeatherLocation);
 }
 
-//Temperature conversion
+//Temperature conversion to Fahrenheit
 function changeToFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("#temperature");
@@ -205,6 +210,7 @@ function changeToFahrenheit(event) {
   temp.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
+//Temperature conversion to Celsius
 function changeToCelsius(event) {
   event.preventDefault();
   celsius.classList.add("active");
