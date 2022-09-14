@@ -1,4 +1,31 @@
-//Current date
+//Update the CSS based on local time of search input
+function adjustColorMode(localCityTime) {
+  let now = localCityTime.getHours();
+
+  document.documentElement.classList.remove("morning");
+  document.documentElement.classList.remove("night");
+
+  if (now >= 11 && now < 20) {
+    document.documentElement.classList.remove("night");
+    document.documentElement.classList.remove("morning");
+  }
+  if (now >= 20 || now < 6) {
+    containerDark.classList.add("night");
+    quoteDark.classList.add("night");
+    searchButton.classList.add("night");
+    currentButton.classList.add("night");
+    return;
+  }
+  if (now >= 6 && now < 11) {
+    containerDark.classList.add("morning");
+    quoteDark.classList.add("morning");
+    searchButton.classList.add("morning");
+    currentButton.classList.add("morning");
+    return;
+  }
+}
+
+//Current date of search input
 function getDate(localCityTime) {
   let weekdays = [
     "Sunday",
@@ -54,6 +81,7 @@ function getInputCityTime(timestamp, timezone) {
   console.log(selectedDate);
 
   getDate(selectedDate);
+  adjustColorMode(selectedDate);
   return selectedDate;
 }
 
@@ -237,6 +265,8 @@ fahrenheit.addEventListener("click", changeToFahrenheit);
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", changeToCelsius);
 
+let containerDark = document.querySelector("#container-all");
+let quoteDark = document.querySelector("#daily-quote");
 //
 //Default city
 searchCity("Berlin");

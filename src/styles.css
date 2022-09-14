@@ -190,7 +190,7 @@ form.city-search-form {
 }
 
 .current-btn:hover {
-  background: rgba(76, 236, 110, 0.65);
+  background: rgba(228, 245, 163, 0.65);
   border: 2px solid rgb(228, 245, 163);
   cursor: pointer;
 }
@@ -273,9 +273,25 @@ img.forecast-icon {
   padding-top: 0.63rem;
   text-align: center;
   text-shadow: 0px 0.2px 0.2px rgba(0, 0, 0, 0.5);
-  transition: all 600ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .quote:hover {
   color: rgb(228, 245, 163);
+}
+
+.night.container-all {
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -1%,
+    rgb(27, 10, 91) 50%
+  );
+}
+
+.morning.container-all {
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -50%,
+    rgb(223, 216, 251) 100%
+  );
 }

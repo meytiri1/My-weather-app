@@ -25,7 +25,7 @@
     <title>Weather app</title>
   </head>
   <body>
-    <div class="container-all">
+    <div class="container-all" id="container-all">
       <form class="city-search-form" id="search-form">
         <div class="d-inline-flex flex-wrap">
           <div class="p-2 flex-grow-1">
@@ -78,7 +78,10 @@
                 <h2 class="city" id="city"></h2>
                 , <span class="country" id="country"></span>
                 <h3 id="current-weather"></h3>
-                <p class="date"><span class="date" id="date"></span></p>
+                <p class="date">
+                  Last updated:
+                  <span class="date" id="date"></span>
+                </p>
               </div>
             </div>
           </div>
