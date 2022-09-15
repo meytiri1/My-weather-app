@@ -1,3 +1,4 @@
+/*Bootstrap Screen size adjustment*/
 @media screen and (max-width: 576px) {
   .container-all {
     max-width: 85%;
@@ -18,6 +19,7 @@
   }
 }
 
+/*Bootstrap Screen size adjustment*/
 @media screen and (max-width: 768px) {
   .container-all {
     max-width: 85%;
@@ -39,6 +41,7 @@
   }
 }
 
+/*Bootstrap Screen size adjustment*/
 @media screen and (max-width: 1400px) {
   .container-all {
     max-width: 90%;
@@ -57,6 +60,7 @@
   }
 }
 
+/*Bootstrap Screen size adjustment*/
 @media screen and (min-width: 1400px) {
   .container-all {
     max-width: 60%;
@@ -79,6 +83,7 @@
   }
 }
 
+/*Day mode: general CSS*/
 a {
   text-decoration: none;
 }
@@ -113,10 +118,11 @@ div.sun-info {
 }
 img.icon-sun {
   display: inline-block;
-  justify-self: left;
   margin: 0;
   padding: 0;
-  width: 9.5rem;
+  width: 9rem;
+  height: auto;
+  object-position: 50% 50%;
 }
 
 span.country {
@@ -276,10 +282,42 @@ img.forecast-icon {
   transition: all 400ms ease-in-out;
 }
 
-.quote:hover {
-  color: rgb(228, 245, 163);
+/*Morning mode: light CSS*/
+.morning .container-all {
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.31) -50%,
+    rgb(223, 216, 251) 60%
+  );
+}
+.morning .min-max-temp {
+  background: #fff;
+}
+.morning .weather-info2 {
+  background: #fff;
+}
+.morning .current-btn {
+  background: rgb(151, 185, 20);
+  border: 2px solid rgb(151, 185, 20);
+}
+.morning .current-btn:hover {
+  background: rgba(151, 185, 20, 0.65);
+  border: 2px solid rgb(151, 185, 20);
+}
+.morning #search-addon {
+  background: rgb(151, 185, 20);
+  border: 2px solid rgb(151, 185, 20);
+}
+.morning #search-addon:hover {
+  background: rgba(151, 185, 20, 0.65);
+  border: 2px solid rgb(151, 185, 20);
+}
+.morning .quote {
+  color: #97b914;
+  text-shadow: 0px 0.3px 0.3px rgba(46, 46, 46, 0.5);
 }
 
+/*Night mode: dark CSS*/
 .night .container-all {
   background: linear-gradient(
     to top,
@@ -287,11 +325,16 @@ img.forecast-icon {
     rgb(27, 10, 91) 60%
   );
 }
-
-.morning .container-all {
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.31) -50%,
-    rgb(223, 216, 251) 160%
-  );
+.night .container-city {
+  color: #fff;
+}
+.night h1 {
+  color: rgb(228, 245, 163);
+}
+.night a.active {
+  color: rgb(228, 245, 163);
+}
+.night .quote {
+  color: rgb(228, 245, 163);
+  text-shadow: 0px 0.3px 0.3px rgba(46, 46, 46, 0.5);
 }
