@@ -2,26 +2,55 @@
 function adjustColorMode(localCityTime) {
   let now = localCityTime.getHours();
 
-  document.documentElement.classList.remove("morning");
-  document.documentElement.classList.remove("night");
-
   if (now >= 11 && now < 20) {
-    document.documentElement.classList.remove("night");
-    document.documentElement.classList.remove("morning");
-  }
-  if (now >= 20 || now < 6) {
-    containerDark.classList.add("night");
-    quoteDark.classList.add("night");
-    searchButton.classList.add("night");
-    currentButton.classList.add("night");
-    return;
-  }
-  if (now >= 6 && now < 11) {
-    containerDark.classList.add("morning");
-    quoteDark.classList.add("morning");
-    searchButton.classList.add("morning");
-    currentButton.classList.add("morning");
-    return;
+    containerDark.classList.remove("night");
+    quoteDark.classList.remove("night");
+    searchButton.classList.remove("night");
+    currentButton.classList.remove("night");
+    temperatureDark.classList.remove("night");
+    cityDark.classList.remove("night");
+    countryDark.classList.remove("night");
+    containerDark.classList.remove("morning");
+    quoteDark.classList.remove("morning");
+    searchButton.classList.remove("morning");
+    currentButton.classList.remove("morning");
+    temperatureDark.classList.remove("morning");
+    cityDark.classList.remove("morning");
+    countryDark.classList.remove("morning");
+  } else {
+    if (now >= 20 || now < 6) {
+      containerDark.classList.remove("morning");
+      quoteDark.classList.remove("morning");
+      searchButton.classList.remove("morning");
+      currentButton.classList.remove("morning");
+      temperatureDark.classList.remove("morning");
+      cityDark.classList.remove("morning");
+      countryDark.classList.remove("morning");
+      containerDark.classList.add("night");
+      quoteDark.classList.add("night");
+      searchButton.classList.add("night");
+      currentButton.classList.add("night");
+      temperatureDark.classList.add("night");
+      cityDark.classList.add("night");
+      countryDark.classList.add("night");
+    } else {
+      if (now >= 6 && now < 11) {
+        containerDark.classList.remove("night");
+        quoteDark.classList.remove("night");
+        searchButton.classList.remove("night");
+        currentButton.classList.remove("night");
+        temperatureDark.classList.remove("night");
+        cityDark.classList.remove("night");
+        countryDark.classList.remove("night");
+        containerDark.classList.add("morning");
+        quoteDark.classList.add("morning");
+        searchButton.classList.add("morning");
+        currentButton.classList.add("morning");
+        temperatureDark.classList.add("morning");
+        cityDark.classList.add("morning");
+        countryDark.classList.add("morning");
+      }
+    }
   }
 }
 
@@ -267,6 +296,10 @@ celsius.addEventListener("click", changeToCelsius);
 
 let containerDark = document.querySelector("#container-all");
 let quoteDark = document.querySelector("#daily-quote");
+let temperatureDark = document.querySelector("#temperature");
+let cityDark = document.querySelector("#city");
+let countryDark = document.querySelector("#country");
+
 //
 //Default city
 searchCity("Berlin");
