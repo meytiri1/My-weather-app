@@ -280,7 +280,7 @@ img.forecast-icon {
   color: rgb(228, 245, 163);
 }
 
-.night.container-all {
+.night .container-all {
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.31) -50%,
@@ -288,7 +288,7 @@ img.forecast-icon {
   );
 }
 
-.morning.container-all {
+.morning .container-all {
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.31) -50%,
