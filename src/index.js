@@ -18,6 +18,21 @@ function adjustColorMode(localCityTime) {
   }
 }
 
+//
+//Daily quotes
+function changeQuote(weather) {
+  let quote = document.querySelector("#daily-quote");
+  if (weather === "Clear") {
+    quote.innerHTML = `"Keep your eyes lifted high upon the sun, and you'll see the best light in everyone."`;
+  } else {
+    if (weather === `Clouds`) {
+      quote.innerHTML = `"The sky and the sun are always there. It's the clouds that come and go."`;
+    } else {
+      quote.innerHTML = `"Smell the rain, and feel the sky. Let your soul and spirit fly."`;
+    }
+  }
+}
+
 //Current date of search input
 function getDate(localCityTime) {
   let weekdays = [
@@ -211,16 +226,16 @@ function retrieveWeatherLocation(position) {
   axios.get(apiUrl).then(getCurrentWeather);
 }
 
+//Get current geolocation
+function showCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(retrieveWeatherLocation);
+}
+
 //Get input from search form
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input").value;
   searchCity(city);
-}
-
-//Get current geolocation
-function showCurrentLocation() {
-  navigator.geolocation.getCurrentPosition(retrieveWeatherLocation);
 }
 
 //Temperature conversion to Fahrenheit
@@ -259,29 +274,8 @@ fahrenheit.addEventListener("click", changeToFahrenheit);
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", changeToCelsius);
 
-let containerDark = document.querySelector("#container-all");
-let quoteDark = document.querySelector("#daily-quote");
-let temperatureDark = document.querySelector("#temperature");
-let cityDark = document.querySelector("#city");
-let countryDark = document.querySelector("#country");
+let weatherDescription = null;
 
 //
 //Default city
 searchCity("Berlin");
-
-//
-//Daily quotes
-function changeQuote(weather) {
-  let quote = document.querySelector("#daily-quote");
-  if (weather === "Clear") {
-    quote.innerHTML = `"Keep your eyes lifted high upon the sun, and you'll see the best light in everyone."`;
-  } else {
-    if (weather === `Clouds`) {
-      quote.innerHTML = `"The sky and the sun are always there. It's the clouds that come and go."`;
-    } else {
-      quote.innerHTML = `"Smell the rain, and feel the sky. Let your soul and spirit fly."`;
-    }
-  }
-}
-
-let weatherDescription = null;
