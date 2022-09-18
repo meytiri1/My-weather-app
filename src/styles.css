@@ -132,12 +132,15 @@ h3 {
   text-align: center;
   padding: 0.94rem 0.63rem;
 }
+.max-temp {
+  font-weight: bold;
+}
 
 div.forecast-container {
   margin: 1.2rem 0;
 }
 div.weather-info2 {
-  background: #fff;
+  background: rgba(255, 255, 255, 1);
   border: none;
   border-radius: 3.75rem;
   color: #000;
@@ -165,6 +168,8 @@ div.weather-info2 {
 
 footer p {
   font-family: "Courier New", Courier, monospace;
+  margin: 0 auto;
+  max-width: 95%;
   text-align: center;
 }
 
@@ -195,6 +200,12 @@ footer p {
   div.weather-info2 {
     max-width: max-content;
     margin: 0 auto;
+  }
+  footer p {
+    font-family: "Courier New", Courier, monospace;
+    margin: 0 auto;
+    max-width: 70%;
+    text-align: center;
   }
 }
 
@@ -231,7 +242,7 @@ footer p {
 /*Bootstrap Large devices (desktops, 992px and up)*/
 @media screen and (min-width: 992px) {
   .container.container-all {
-    max-width: 59%;
+    max-width: 60%;
     margin: 1.5rem auto;
     padding: 2.5rem;
   }
@@ -291,9 +302,9 @@ footer p {
 /*Bootstrap XX-Large devices (larger desktops, 1400px and up)*/
 @media screen and (min-width: 1400px) {
   .container.container-all {
-    max-width: 70%;
+    max-width: 48%;
     margin: 1.5rem auto;
-    padding: 2.2rem;
+    padding: 2.5rem;
   }
 
   button.current-btn {
