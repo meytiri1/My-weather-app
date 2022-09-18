@@ -25,10 +25,12 @@
     <title>Weather app</title>
   </head>
   <body>
-    <div class="container-all" id="container-all">
+    <div class="container container-all" id="container-all">
       <form class="city-search-form" id="search-form">
-        <div class="d-inline-flex flex-wrap">
-          <div class="p-2 flex-grow-1">
+        <div class="d-flex">
+          <div
+            class="col-7 ms-lg-2 me-auto me-sm-5 me-md-5 me-lg-3 me-xl-4 mb-2"
+          >
             <div class="input-group rounded city-search">
               <input
                 type="search"
@@ -47,9 +49,9 @@
               </span>
             </div>
           </div>
-          <div class="p-2 flex-shrink-1 search-btn">
+          <div class="col-auto mb-2 mx-lg-auto search-btn">
             <button
-              class="btn text-nowrap w-100 align-items-center current-btn"
+              class="btn p-2 text-nowrap w-100 align-items-center current-btn"
               id="current-button"
               type="button"
             >
@@ -60,10 +62,8 @@
       </form>
       <div class="container">
         <div class="d-flex row h-100 weather-all">
-          <div class="col-5 text-center sun-info">
+          <div class="col-7 ms-lg-2 ps-3 sun-info">
             <img src="" alt="" class="icon-sun" id="icon-sun" />
-            <br />
-            <br />
             <div class="container-city">
               <div class="city-weather">
                 <h1>
@@ -85,7 +85,7 @@
               </div>
             </div>
           </div>
-          <div class="col-4 my-auto text-center weather-info">
+          <div class="col-5 mt-sm-4 mx-sm-auto text-center weather-info">
             <ul class="min-max-temp">
               <li>
                 <span class="min-temp" id="min-temp"></span>°C /
@@ -103,8 +103,10 @@
               <li><span id="humidity"></span> %</li>
             </ul>
           </div>
-          <div class="col-3 my-auto text-center weather-info2">
-            <div class="weather-forecast" id="forecast"></div>
+          <div class="row forecast-container">
+            <div class="weather-info2">
+              <div class="weather-forecast" id="forecast"></div>
+            </div>
           </div>
         </div>
         <div class="quote">
