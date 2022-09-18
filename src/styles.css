@@ -82,7 +82,6 @@ h1 {
   vertical-align: baseline;
 }
 a {
-  color: rgb(184, 164, 255);
   text-decoration: none;
 }
 a.active {
@@ -371,6 +370,9 @@ footer p {
 }
 .night h1 {
   color: rgb(228, 245, 163);
+}
+.night a {
+  color: rgb(184, 164, 255);
 }
 .night a.active {
   color: rgb(228, 245, 163);
